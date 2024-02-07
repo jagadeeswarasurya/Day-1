@@ -1,0 +1,60 @@
+Http 1.1
+
+HTTP/1.1, short for Hypertext Transfer Protocol 1.1, is a protocol used for transferring data over the World Wide Web.
+It's the standard protocol used by web browsers and servers to communicate with each other. 
+HTTP/1.1 was introduced as an upgrade to HTTP/1.0, aiming to improve performance and efficiency.
+
+Key features of HTTP/1.1 include:
+
+1) Persistent Connections.
+2) Request Pipelining
+3) Caching.
+4) Chunked Transfer Encoding.
+5) Compression.
+
+
+HTTP/1.1 has been the predominant version of the HTTP protocol for many years and has served as the foundation for the modern web. 
+However, it does have limitations, particularly in handling concurrent requests and prioritizing resources. 
+These limitations led to the development of HTTP/2, which introduced significant enhancements to address these issues and further optimize web performance.
+
+Http 2
+
+HTTP/2 introduces significant improvements in performance, efficiency, and features. 
+By leveraging multiplexing, header compression, binary protocol, server push, and stream prioritization, 
+HTTP/2 offers a faster and more responsive web experience, especially for complex and resource-intensive web applications.
+
+Multiplexing:
+
+HTTP/1.1: In HTTP/1.1, each request/response cycle typically requires a separate connection. 
+This can lead to head-of-line blocking issues, where subsequent requests are delayed while waiting for previous ones to complete.
+HTTP/2: HTTP/2 introduces multiplexing, allowing multiple requests and responses to be sent and received concurrently over a single TCP connection. This eliminates head-of-line blocking and improves overall performance, especially for modern web applications with many resources.
+
+
+Header Compression:
+
+HTTP/1.1: Headers are sent in plaintext with each request and response, leading to increased overhead and slower performance, especially over high-latency connections.
+HTTP/2: HTTP/2 employs header compression, reducing the size of headers transferred between the client and server. 
+This optimization decreases latency and improves network efficiency, particularly on bandwidth-constrained connections.
+
+
+Binary Protocol:
+
+HTTP/1.1: HTTP/1.1 is a text-based protocol, which is human-readable but can be verbose and less efficient for machines to parse.
+HTTP/2: HTTP/2 is a binary protocol, meaning data is encoded in binary format for transmission. 
+This reduces overhead and makes parsing more efficient for both clients and servers, resulting in faster processing and improved performance.
+
+
+Server Push:
+
+HTTP/1.1: In HTTP/1.1, additional resources must be explicitly requested by the client, even if they are likely to be needed. 
+This can result in suboptimal performance, especially for complex web applications with many dependencies.
+HTTP/2: HTTP/2 introduces server push, allowing the server to proactively send additional resources to the client before they are requested. 
+This can reduce the number of round trips and speed up page load times by anticipating the client's needs.
+
+
+Stream Prioritization:
+
+HTTP/1.1: Requests are processed in the order they are received, with no mechanism for prioritization. 
+This can lead to inefficient resource allocation, especially in scenarios with limited network bandwidth.
+HTTP/2: HTTP/2 supports stream prioritization, allowing clients to assign priority levels to different resources. 
+This enables more efficient resource allocation and can improve user experience, particularly for critical assets like CSS and JavaScript files.
